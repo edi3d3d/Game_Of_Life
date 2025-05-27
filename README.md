@@ -73,7 +73,7 @@ Fisierul de input a taskului bonus este formatat in modul urmator:
 "Numar linii" "Numar coloane"
 "Numar generatii"
 listele de la task 2
-coordonata generatie (Numar generatii)
+matricea ultimei generatii
 ```
 
 Fisierul de output a taskului bonus este formatat in modul urmator:
