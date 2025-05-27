@@ -69,18 +69,41 @@ Se continua cautarea pentru celelalte insule.
 
 Fisierul de input a taskului bonus este formatat in modul urmator:
 ```
-"Numar Task (5)"
-"Numar linii" "Numar coloane"
-"Numar generatii"
-listele de la task 2
-matricea ultimei generatii
+5
+20 50
+50
+1 1 7 2 6 3 6 4 7
+...
+50 14 18 15 18 15 19 16 20
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+...
 ```
+Numarul taskului
+Numarul de linii si coloane
+Numarul de generatii
+Listele pentru fiecare generatie
+Matricea Finala
+
 
 Fisierul de output a taskului bonus este formatat in modul urmator:
 ```
-matricea generatiei 0
+++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++X++++++++++++++++++++++++++++++++++++++++++
+++++++++X+++++++++++++++++++++++++++++++++++++++++
+++++++XXX+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
+...
 
 ```
+Matricea initiala si un spatiu la final
 
 ---
 Pentru task-ul bonus:
