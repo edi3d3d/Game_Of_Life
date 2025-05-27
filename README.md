@@ -88,7 +88,11 @@ Pentru task-ul bonus:
 
 ---
 
-#### Functii explicate
+
+### Functii explicate
+
+
+---
 
 ### Game_Of_Life.c
 
