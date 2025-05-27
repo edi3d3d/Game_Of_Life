@@ -165,8 +165,8 @@ Mai jos este un exemplu cu adancime 2 si Call Stack-ul cu functiile apelate, num
 3  4 6 7
 ```
 Call Stack unde:
-<- reprezinta apelarea functiei
--> eliminarea functiei (finalul functiei)
+* <- reprezinta apelarea functiei
+* -> eliminarea functiei (finalul functiei)
 ```
       <- 1
 1     <- 2
