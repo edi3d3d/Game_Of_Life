@@ -1,6 +1,7 @@
 # Game_Of_Life
 
-In fisierul `Game_Of_Life.c` se primeste un numar de argumente, acestea fiind numele fisierelor de input. In cod se creeaza un fisier nou in care se inlocuieste `in` cu `out` pentru fisierul de output.
+In fisierul `Game_Of_Life.c` se primeste un numar de argumente, acestea fiind numele fisierelor de input.
+In cod se creeaza un fisier nou in care se inlocuieste `in` cu `out` pentru fisierul de output.
 
 ## Functiile principale din `main`
 
