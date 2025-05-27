@@ -143,7 +143,7 @@ Pentru task-ul bonus:
 ### graph.c
 
 ## GetValue()
-- retuneaza 0 daca elementul din matrice cu linia "l" si coloana "c" este in afara matricei
+- retuneaza 0 daca elementul din matrice cu linia "l" si coloana "c" se afla in afara matricei
 - altfel returneaza valoarea elementului
 
 ## add_in_vector()
@@ -152,23 +152,22 @@ Pentru task-ul bonus:
 ## floodSave()
 - este un algoritm oarecare de `Fill()` care salveaza coordonatele "umplute" intr-un vector
 - schimba toate elementele din insula din care fac parte coordonatele "l" si "c"
-- din valoarea "original" in valoarea "new",
 
 ## getIslands()
-- returneaza un Vector de Vectori cu toate coodonatele din fiecare insula, folosindu-se de functia `floodSave()`
+- returneaza un Vector de Vectori cu toate coodonatele din fiecare insula, folosind functia `floodSave()` pe fiecare celula din matrice
 
 ## Hamiltonian()
 - folosind recursivitate, backtracking si bruteforce adauga coordonatele lantului Hamiltonian intr-un vector, returnand:
 -  1 daca lantul curent este de Hamiltonian
 -  0 daca coordonatele sunt invalide
--  -1 daca nu s-a gasit un lant Hamiltonian
+- -1 daca nu s-a gasit un lant Hamiltonian
 
 ## sortVector()
-- sorteaza un vector lexicografic in functie de linii, si dupa de coordonate
+- sorteaza un vector lexicografic in functie de coordonate
 
 ## LongestHamiltonian()
 - apeleaza `getIslands()` pentru a face rost de lista cu insule
-- parcurge fiecare insula
+- parcurge fiecare insula pe rand
 - apeleaza Hamiltonian pentru fiecare element din insula respectiva pana la gasirea unui astfel de lant
 - compara lantul gasit cu cel mai lung si il salveaza daca acesta este mai lung
 - la final afiseaza lantul cel mai lung si lungimea acestuia
