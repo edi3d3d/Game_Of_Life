@@ -141,7 +141,7 @@ Pentru task-ul bonus:
 
 functia neighbour_count() poate fii imbunatatita pentru cine doreste a o face
 
-#Generare matrice:
+# Generare matrice:
 
 1. se citeste matricea initiala (adancime 0) in lista din primul nod
 2. se apeleaza `task_cells()`
