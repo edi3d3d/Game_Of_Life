@@ -2,6 +2,7 @@
 
 [Detalii](https://site-pa.netlify.app/proiecte/game_of_life/)
 
+
 ## Requirements:
 Surse:
 - Game_Of_Life.c
@@ -38,15 +39,12 @@ OutputFisier/informatii.out
 
 
 
-
-
-
 Fisierul de input este formatat in modul urmator:
 ```
-1     //numar task
-5 13 //numarul de linii si coloane
-50    //numarul de generatii
-+++++++++++++
+1               //numar task
+5 13            //numarul de linii si coloane
+50              //numarul de generatii
++++++++++++++   //matrice initiala
 +++++++X+++++
 ++++++++X++++
 ++++++XXX++++
@@ -136,6 +134,46 @@ Pentru task-ul bonus:
 
 ---
 
+## Logica si structura cod:
+* fiecare generatie salveaza intr-o lista coordonatele celulelor a caror stare s-a schimbat fata de generatia precedenta
+
+* pentru a determina starea unei celule la o generatie k, se parcurge recursiv fiecare nod pana la acel moment, folosind functia is_alive()
+
+functia neighbour_count() poate fii imbunatatita pentru cine doreste a o face
+
+#Generare matrice:
+
+1. se citeste matricea initiala (adancime 0) in lista din primul nod
+2. se apeleaza `task_cells()`
+3. se adauga un nod nou (adancime 1) si se actualizeaza in functie de "Numar task"
+4. se apeleaza din nou `task_cells()`, pana cand se ajunge la generatia dorita
+5. acest proces se comporta ca un call stack: se adauga/elimina niveluri pe masura ce inaintezi sau te intorci
+
+
+* pentru task 3/4 se foloseste aceasi structura chiar daca in teorie ar necesita un arbore binar
+* in loc sa salvezi toate variantele posibile de drumuri (care ar forma un arbore binar complet), parcurgi doar un drum la un moment dat
+* la fiecare nivel se apeleaza functia recursiva pentru stanga, care apeleaza la randul inca odata functia recursiva pentru stanga, si tot asa pana ajunge la adancimea dorita
+* dupa ce ajunge la adancimea dorita se elimina din callstack ultima functia apelata, care permite functiei de dinainte sa continue, care apeleaza functia recursiva pentru dreapta si tot asa pana se termina toate functiile apelate
+
+Mai jos este un exemplu cu adancime 2 si Call Stack-ul cu functiile apelate, numerele sunt facute doar pentru a arata modul in care se intra in ele, acestea sunt aceasi functie, daca, fata de tatal sau este pe stanga atunci este regula de la task 3, altfel este regula normala 
+
+```
+    1
+   / \
+  2   5
+ / \ / \
+3  4 6 7
+```
+Call Stack:
+```
+1
+12
+123
+124
+15
+156
+157
+```
 
 ### Functii explicate
 
