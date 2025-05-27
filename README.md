@@ -109,7 +109,7 @@ Pentru task-ul bonus:
 - aceasta suma poate fii interpretata ca numarul de schimbari a unei celule, asadar o suma para reprezinta starea moarta a celulei, iar suma impara reprezinta starea vie a celulei
 
 ## neighbour_count()
-- apeleaza functia `is_alive()` pentru toti vecinii coordonatei "l" si "c", returnant numarul vecinilor vii
+- apeleaza functia `is_alive()` pentru toti vecinii coordonatei "l" si "c", returnand numarul vecinilor vii
 
 ## printf_cells()
 - afiseaza tabla sau lista unei anumite generatii din stiva.
