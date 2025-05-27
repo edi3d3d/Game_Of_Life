@@ -180,43 +180,43 @@ Call Stack:
 
 ---
 
-### [Game_Of_Life.c](https://github.com/edi3d3d/Game_Of_Life/blob/main/Game_Of_Life.c)
+## [Game_Of_Life.c](https://github.com/edi3d3d/Game_Of_Life/blob/main/Game_Of_Life.c)
 
-## add_in_list()
+### add_in_list()
 - adauga un set de coordonate "l" si "c" intr-o lista
 
-## in_list()
+### in_list()
 - cauta un set de coordonate "l" si "c" dintr-o lista (cautare binara deoarece acestea sunt adaugate in ordine lexicografica"
 
-## is_alive()
+### is_alive()
 - apeleaza functia `in_list()` pentru fiecare element din stiva pana la o anumita generatie si numara de cate ori a fost gasit
 - aceasta suma poate fii interpretata ca numarul de schimbari a unei celule, asadar o suma para reprezinta starea moarta a celulei, iar suma impara reprezinta starea vie a celulei
 
-## neighbour_count()
+### neighbour_count()
 - apeleaza functia `is_alive()` pentru toti vecinii coordonatei "l" si "c", returnand numarul vecinilor vii
 
-## printf_cells()
+### printf_cells()
 - afiseaza tabla sau lista unei anumite generatii din stiva.
 - tabla este afisata folosind functia `is_alive()` pentru fiecare element din matricea de dimensiuni "Numar Linii" x "Numar Coloane"
 
-## list2list()
+### list2list()
 - adauga o linie a fisierului de input intr-o lista din stiva
   
 - citeste numarul generatiei iar apoi un set de 2 numere, linia si coloana
 - acestea sunt adaugate la finalul stivei
 
-## setup()
+### setup()
 - citeste cele 4 numere initiale din fisierul de input
 - initializeaza primul nod din stiva
 - in cazul taskului bonus citeste listele si le adauga in stiva
 - citeste matricea, adaugand celulele vii in stiva
 
-## update_cells()
+### update_cells()
 - initializeaza nodul curent al stivei
 - parcurge matricea de dimensiuni "Numar Linii" x "Numar Coloane"
 - in cazul schimbarii starii celulei, coordonatele acestea sunt adaugate in lista nodului curent.  
 
-## task_cells()
+### task_cells()
 - afiseaza tabla
 - creaza matricea pentru task 4
 - apeleaza functia `update_cells()` cu cele 2 reguli
@@ -224,32 +224,32 @@ Call Stack:
 
 ---
 
-### [graph.c](https://github.com/edi3d3d/Game_Of_Life/blob/main/graph.c)
+## [graph.c](https://github.com/edi3d3d/Game_Of_Life/blob/main/graph.c)
 
-## GetValue()
+### GetValue()
 - retuneaza 0 daca elementul din matrice cu linia "l" si coloana "c" se afla in afara matricei
 - altfel returneaza valoarea elementului
 
-## add_in_vector()
+### add_in_vector()
 - adauga linia "l" si coloana "c" in vector
 
-## floodSave()
+### floodSave()
 - este un algoritm oarecare de `Fill()` care salveaza coordonatele "umplute" intr-un vector
 - schimba toate elementele din insula din care fac parte coordonatele "l" si "c"
 
-## getIslands()
+### getIslands()
 - returneaza un Vector de Vectori cu toate coodonatele din fiecare insula, folosind functia `floodSave()` pe fiecare celula din matrice
 
-## Hamiltonian()
+### Hamiltonian()
 - folosind recursivitate, backtracking si bruteforce adauga coordonatele lantului Hamiltonian intr-un vector, returnand:
 -  1 daca lantul curent este de Hamiltonian
 -  0 daca coordonatele sunt invalide
 - -1 daca nu s-a gasit un lant Hamiltonian
 
-## sortVector()
+### sortVector()
 - sorteaza un vector lexicografic in functie de coordonate
 
-## LongestHamiltonian()
+### LongestHamiltonian()
 - apeleaza `getIslands()` pentru a face rost de lista cu insule
 - parcurge fiecare insula pe rand
 - apeleaza Hamiltonian pentru fiecare element din insula respectiva pana la gasirea unui astfel de lant
