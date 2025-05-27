@@ -134,14 +134,14 @@ Pentru task-ul bonus:
 
 ---
 
-## Logica si structura cod:
+# Logica si structura cod:
 * fiecare generatie salveaza intr-o lista coordonatele celulelor a caror stare s-a schimbat fata de generatia precedenta
 
 * pentru a determina starea unei celule la o generatie k, se parcurge recursiv fiecare nod pana la acel moment, folosind functia is_alive()
 
 functia neighbour_count() poate fii imbunatatita pentru cine doreste a o face
 
-# Generare matrice:
+## Generare matrice:
 
 1. se citeste matricea initiala (adancime 0) in lista din primul nod
 2. se apeleaza `task_cells()`
@@ -175,7 +175,7 @@ Call Stack:
 157
 ```
 
-### Functii explicate
+# Functii explicate
 
 
 ---
