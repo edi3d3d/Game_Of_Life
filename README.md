@@ -33,7 +33,7 @@ Se genereaza un element nou in stiva cu listele de coordonate si se adauga eleme
 - pentru taskurile 1 si 2, se foloseste regula originala;
 - pentru taskurile 3 si 4, regula alternativa si o regula originala, in ordinea aceasta.
 
-Dupa adaugarea noilor elemente in liste, se apeleaza din nou functia `task_cells()` cu lista noua creata.  
+Dupa adaugarea noilor elemente in liste, se apeleaza din nou functia `task_cells()` cu lista noua creata.
 Acest mecanism permite apelarea recursiva si elimina necesitatea unei structuri suplimentare de tip arbore binar pentru a simula si afisa elementele, stiva de recursivitate si cea pentru listele de coordonate fiind suficiente.
 
 ---
@@ -62,3 +62,78 @@ Daca se gaseste un astfel de lant:
 Se continua cautarea pentru celelalte insule.
 
 ---
+
+### Task Bonus
+
+Fisierul de input a taskului bonus este formatat in modul urmator:
+```
+"Numar Task (5)"
+"Numar linii" "Numar coloane"
+"Numar generatii"
+listele de la task 2
+coordonata generatie (Numar generatii)
+```
+
+Fisierul de output a taskului bonus este formatat in modul urmator:
+```
+matricea generatiei 0
+
+```
+
+---
+Pentru task-ul bonus:
+- a trebuit sa pot citi listele de la task 2 si a le adauga in stiva, asadar, am facut o functie numita list2list ce transforma lista afisata in fisierul input intr-o lista din stiva.
+- Dupa transformarea tuturor listelor, se adauga si matricea intr-o lista noua
+- La final se afiseaza identic ca la task 1 si 3 matricea rezultata
+
+---
+
+#### Functii explicate
+
+### Game_Of_Life.c
+
+## add_in_list()
+- adauga un set de coordonate "l" si "c" intr-o lista
+
+## in_list()
+- cauta un set de coordonate "l" si "c" dintr-o lista (cautare binara deoarece acestea sunt adaugate in ordine lexicografica"
+
+## is_alive()
+- apeleaza functia `in_list()` pentru fiecare element din stiva pana la o anumita generatie si numara de cate ori a fost gasit
+- aceasta suma poate fii interpretata ca numarul de schimbari a unei celule, asadar o suma para reprezinta starea moarta a celulei, iar suma impara reprezinta starea vie a celulei
+
+## neighbour_count()
+- apeleaza functia `is_alive()` pentru toti vecinii coordonatei "l" si "c", returnant numarul vecinilor vii
+
+## printf_cells()
+- afiseaza tabla sau lista unei anumite generatii din stiva.
+- tabla este afisata folosind functia `is_alive()` pentru fiecare element din matricea de dimensiuni "Numar Linii" x "Numar Coloane"
+
+## list2list()
+- adauga o linie a fisierului de input intr-o lista din stiva
+  
+- citeste numarul generatiei iar apoi un set de 2 numere, linia si coloana
+- acestea sunt adaugate la finalul stivei
+
+## setup()
+- citeste cele 4 numere initiale din fisierul de input
+- initializeaza primul nod din stiva
+- in cazul taskului bonus citeste listele si le adauga in stiva
+- citeste matricea, adaugand celulele vii in stiva
+
+## update_cells()
+- initializeaza nodul curent al stivei
+- parcurge matricea de dimensiuni "Numar Linii" x "Numar Coloane"
+- in cazul schimbarii starii celulei, coordonatele acestea sunt adaugate in lista nodului curent.  
+
+## task_cells()
+- afiseaza tabla
+- creaza matricea pentru task 4
+- apeleaza functia `update_cells()` cu cele 2 reguli
+
+
+---
+
+### graph.c
+
+##
