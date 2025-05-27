@@ -35,7 +35,7 @@ Regula de modificare se aplica in functie de task:
 - pentru taskurile 1 si 2, se foloseste regula originala;
 - pentru taskurile 3 si 4, regula alternativa si o regula originala, in ordinea aceasta.
 
-Dupa adaugarea noilor elemente in liste, se apeleaza din nou functia `task_cells()` cu lista noua creata.
+Dupa adaugarea noilor elemente in lista, se apeleaza din nou functia `task_cells()` cu lista noua creata.
 Acest mecanism permite apelarea recursiva si elimina necesitatea unei structuri suplimentare de tip arbore binar pentru a simula si afisa elementele, stiva de recursivitate si cea pentru listele de coordonate fiind suficiente.
 
 ---
