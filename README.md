@@ -164,15 +164,23 @@ Mai jos este un exemplu cu adancime 2 si Call Stack-ul cu functiile apelate, num
  / \ / \
 3  4 6 7
 ```
-Call Stack:
+Call Stack: unde <- reprezinta apelarea functiei, iar -> eliminarea functiei (finalul functiei)
 ```
-1
-12
-123
-124
-15
-156
-157
+      <- 1
+1     <- 2
+12    <- 3
+123   -> 2
+12    <- 4
+124   -> 4
+12    -> 2
+1     <- 5
+15    <- 6
+156   -> 6
+15    <- 7
+157   -> 7
+15    -> 5
+1     -> 1
+
 ```
 
 # Functii explicate
