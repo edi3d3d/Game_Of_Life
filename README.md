@@ -16,9 +16,9 @@ Se citesc patru valori:
 - numarul taskului,
 - numarul de linii,
 - numarul de coloane,
-- numarul de generatii care trebuie simulate.
+- numarul de generatii ce trebuiesc simulate.
 
-Se citeste matricea si se adauga intr-o lista din stiva coordonatele celulelor vii.
+Se citeste matricea si se adauga coordonatele celulelor vii intr-o lista din stiva.
 
 ---
 
