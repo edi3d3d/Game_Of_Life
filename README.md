@@ -30,7 +30,8 @@ Se afiseaza tabla in functie de numarul taskului:
 
 Daca generatia curenta este egala cu numarul de generatii ce trebuie simulate, executia se opreste.
 
-Se genereaza un element nou in stiva cu listele de coordonate si se adauga elementele care se modifica pentru generatia urmatoare. Regula de modificare se aplica in functie de task:
+Se genereaza un nod nou in stiva si se adauga in lista elementele care se modifica pentru generatia urmatoare.
+Regula de modificare se aplica in functie de task:
 - pentru taskurile 1 si 2, se foloseste regula originala;
 - pentru taskurile 3 si 4, regula alternativa si o regula originala, in ordinea aceasta.
 
